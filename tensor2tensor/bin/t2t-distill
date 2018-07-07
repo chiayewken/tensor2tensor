@@ -9,7 +9,7 @@ from tensor2tensor.bin import t2t_distill
 import tensorflow as tf
 
 def main(argv):
-  t2t_distill(argv)
+  t2t_distill.main(argv)
 
 
 if __name__ == "__main__":
