@@ -30,6 +30,7 @@ setup(
         'tensor2tensor/bin/t2t-avg-all',
         'tensor2tensor/bin/t2t-bleu',
         'tensor2tensor/bin/t2t-translate-all',
+        'tensor2tensor/bin/t2t-distill'
     ],
     install_requires=[
         'bz2file',
