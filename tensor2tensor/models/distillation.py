@@ -59,13 +59,13 @@ class Distillation(t2t_model.T2TModel):
     self.teacher_hparams = registry.hparams(hparams.teacher_hparams)
     self.teacher_model = registry.model(
         hparams.teacher_model)(self.teacher_hparams, mode, problem_hparams,
-                               data_parallelism, decode_hparams)
+                               data_parallelism, decode_hparams, *args, **kwargs)
     self.student_hparams = registry.hparams(hparams.student_hparams)
     self.student_model = registry.model(
         hparams.student_model)(self.student_hparams, mode, problem_hparams,
-                               data_parallelism, decode_hparams)
+                               data_parallelism, decode_hparams, *args, **kwargs)
     super(Distillation, self).__init__(hparams, mode, problem_hparams,
-                                       data_parallelism, decode_hparams)
+                                       data_parallelism, decode_hparams, *args, **kwargs)
 
   def body(self, features):
     hp = self.hparams
