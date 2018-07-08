@@ -46,8 +46,7 @@ class Distillation(t2t_model.T2TModel):
                mode=tf.estimator.ModeKeys.TRAIN,
                problem_hparams=None,
                data_parallelism=None,
-               decode_hparams=None,
-               **kwargs):
+               decode_hparams=None):
     assert hparams.distill_phase in ["train", "distill"]
 
     if hparams.distill_phase == "train" and hparams.teacher_learning_rate:
