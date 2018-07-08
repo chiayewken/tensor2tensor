@@ -43,7 +43,6 @@ class Distillation(t2t_model.T2TModel):
 
   def __init__(self,
                hparams,
-               _reuse,
                mode=tf.estimator.ModeKeys.TRAIN,
                problem_hparams=None,
                data_parallelism=None,
